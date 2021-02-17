@@ -60,7 +60,7 @@ data.drop( ['dates1', 'dates2', 'country1', 'country2'], inplace=True, axis=1 )
 datagroup = data.groupby('date')
 data.to_csv('data_by_date.csv', index=False)
 
-'''for key, data in datagroup:
+for key, data in datagroup:
     with sns.axes_style( 'whitegrid' ):
         ax = sns.lineplot( x=data['date'], y=data['confirmed'], label=key)
     plt.legend( bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0. )
@@ -122,4 +122,4 @@ fig.update_geos( fitbounds='locations', visible=False )
 fig.show()
 
 #save map to file
-fig.write_html('Covid_plotly_map.html')'''
+fig.write_html('Covid_plotly_map.html')
